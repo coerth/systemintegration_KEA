@@ -55,3 +55,23 @@ def read_YAML_from_file(path: str):
         print(f"Error parsing YAML: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
+def read_text_file(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            lines = file.read().splitlines()
+        
+        # Assuming the order is fixed and known
+        data = {
+            'name': lines[0],
+            'money': int(lines[1]),
+            'country': lines[2],
+            'alcohol_tolerance': lines[3],
+            'hobbies': [hobby.strip() for hobby in lines[4].split(',')]
+        }
+        
+        return data
+    except FileNotFoundError:
+        print(f"Error: File not found at {file_path}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
