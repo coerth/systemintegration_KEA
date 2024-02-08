@@ -1,4 +1,5 @@
 // Import the functions
+const { decode } = require('punycode');
 const readerFunctions = require('./fileReader.js');
 const path = require('path');
 
@@ -28,3 +29,4 @@ console.log(csvData);
 
 const txtData = readerFunctions.readTextFile(txtFolderPath);
 console.log(txtData);
+
