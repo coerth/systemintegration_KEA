@@ -11,14 +11,6 @@ app.get('/', (req, res) => {
     res.send({message: 'Hello World!'});
 });
 
-app.get('/otherRoute', (req, res) => {
-    res.send({message: 'Other Route'});
-});
-
-app.post('/postRequest', (req, res) => {
-    res.send({message: 'Post Request'});
-});
-
 app.get('/json', (req, res) => {
     res.json(readJSONFromFile('../../01a Assignment/data/me.json'));
 });
