@@ -1,13 +1,7 @@
 const fs = require('fs');
-const csv = require('csv-parser');
 const yaml = require('js-yaml');
 const xml2js = require('xml2js');
-
-// import fs from 'fs';
-// import csv from 'csv-parser';
-// import yaml from 'js-yaml';
-// import xml2js from 'xml2js';
-
+const csv = require('csv-parser');
 
 function readYAMLFromFile(path) {
     try {
@@ -41,8 +35,7 @@ function readYAMLFromFile(path) {
     try {
       const fileContents = fs.readFileSync(path, 'utf8');
       let data;
-      const parser = new xml2js.Parser({explicitArray : false});
-      parser.parseString(fileContents, (err, result) => {
+      xml2js.parseString(fileContents, (err, result) => {
         if (err) {
           throw err;
         }
@@ -58,33 +51,28 @@ function readYAMLFromFile(path) {
     }
   }
 
-function readCSVFromFile(path) {
-  return new Promise((resolve, reject) => {
-      try {
-          const data = [];
-          fs.createReadStream(path)
-              .pipe(csv())
-              .on('data', (row) => {
-                  // Split the 'hobbies' field into an array of strings
-                  row.hobbies = row.hobbies.split(',');
-                  data.push(row);
-              })
-              .on('end', () => {
-                  resolve(data);
-              })
-              .on('error', (error) => {
-                  if (error.code === 'ENOENT') {
-                      console.error(`Error: File not found at ${path}`);
-                  } else {
-                      console.error(`An unexpected error occurred: ${error.message}`);
-                  }
-                  reject(error);
-              });
-      } catch (error) {
-          reject(error);
+  function readCSVFromFile(path) {
+    try {
+      const fileContents = fs.readFileSync(path, 'utf8');
+      const data = [];
+  
+      fileContents
+        .split('\n')
+        .forEach((line) => {
+          if (line.trim() !== '') {
+            data.push(line.split(','));
+          }
+        });
+  
+      return data;
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        console.error(`Error: File not found at ${path}`);
+      } else {
+        console.error(`An unexpected error occurred: ${error.message}`);
       }
-  });
-}
+    }
+  }
 
   function readTextFile(filePath) {
     try {
@@ -110,10 +98,12 @@ function readCSVFromFile(path) {
     }
   }
 
-  module.exports = {
-    readYAMLFromFile,
-    readJSONFromFile,
-    readXMLFromFile,
-    readCSVFromFile,
-    readTextFile
-  };
+
+
+module.exports = {
+readYAMLFromFile,
+readJSONFromFile,
+readXMLFromFile,
+readCSVFromFile,
+readTextFile,
+};

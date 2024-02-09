@@ -1,0 +1,5 @@
+C:\Users\Morten\Documents\GitHub\Kea Software Development\systemintegration_KEA\02.Data_Files\01a Assignment\C#\obj\Debug\net6.0\C#.csproj.AssemblyReference.cache
+C:\Users\Morten\Documents\GitHub\Kea Software Development\systemintegration_KEA\02.Data_Files\01a Assignment\C#\obj\Debug\net6.0\C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Morten\Documents\GitHub\Kea Software Development\systemintegration_KEA\02.Data_Files\01a Assignment\C#\obj\Debug\net6.0\C#.AssemblyInfoInputs.cache
+C:\Users\Morten\Documents\GitHub\Kea Software Development\systemintegration_KEA\02.Data_Files\01a Assignment\C#\obj\Debug\net6.0\C#.AssemblyInfo.cs
+C:\Users\Morten\Documents\GitHub\Kea Software Development\systemintegration_KEA\02.Data_Files\01a Assignment\C#\obj\Debug\net6.0\C#.csproj.CoreCompileInputs.cache

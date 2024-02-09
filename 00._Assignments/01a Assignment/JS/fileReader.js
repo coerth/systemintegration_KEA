@@ -41,8 +41,7 @@ function readYAMLFromFile(path) {
     try {
       const fileContents = fs.readFileSync(path, 'utf8');
       let data;
-      const parser = new xml2js.Parser({explicitArray : false});
-      parser.parseString(fileContents, (err, result) => {
+      xml2js.parseString(fileContents, (err, result) => {
         if (err) {
           throw err;
         }
@@ -65,8 +64,6 @@ function readCSVFromFile(path) {
           fs.createReadStream(path)
               .pipe(csv())
               .on('data', (row) => {
-                  // Split the 'hobbies' field into an array of strings
-                  row.hobbies = row.hobbies.split(',');
                   data.push(row);
               })
               .on('end', () => {

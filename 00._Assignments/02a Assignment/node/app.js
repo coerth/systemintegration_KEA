@@ -1,4 +1,7 @@
 import express from 'express';
+//import the jsfilereader module
+// import readJSONFromFile from '../../01a Assignment/JS/fileReader.js';
+
 import pkg from '../../01a Assignment/JS/fileReader.js';
 const { readYAMLFromFile, readJSONFromFile, readXMLFromFile, readCSVFromFile, readTextFile } = pkg;
 
