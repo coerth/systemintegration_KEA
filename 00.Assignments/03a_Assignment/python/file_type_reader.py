@@ -21,7 +21,7 @@ def read_CSV_from_file_pandas(path: str):
     try:
         # Read CSV file into a pandas DataFrame
         df = pd.read_csv(path)
-        return df
+        return df.to_dict(orient='records')
     except FileNotFoundError:
         print(f"Error: File not found at {path}")
     except pd.errors.EmptyDataError:
@@ -36,13 +36,32 @@ def read_XML_from_file(path: str):
         # Parse the XML file
         tree = ET.parse(path)
         root = tree.getroot()
-        return root
+        return element_to_dict(root)
     except FileNotFoundError:
         print(f"Error: File not found at {path}")
     except ET.ParseError as e:
         print(f"Error parsing XML: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
+def element_to_dict(element):
+    if len(element) == 0:
+        return element.text
+    else:
+        # Create a dictionary to hold the child elements
+        children_dict = {}
+        for child in element:
+            child_data = element_to_dict(child)
+            # If there's already an entry for this tag, append to it
+            if child.tag in children_dict:
+                # If the entry is not already a list, make it a list
+                if not isinstance(children_dict[child.tag], list):
+                    children_dict[child.tag] = [children_dict[child.tag]]
+                children_dict[child.tag].append(child_data)
+            # If there's no entry for this tag, create one
+            else:
+                children_dict[child.tag] = child_data
+        return children_dict
 
 def read_YAML_from_file(path: str):
     try:
