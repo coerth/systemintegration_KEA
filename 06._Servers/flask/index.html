@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hej</title>
+
+</head>
+<body>
+    <p>Current date: <span id="current-time"></span></p>
+    <p>Current date fra api: <span id="current-time-api"></span></p>
+
+    <script>
+        fetch('https://7ac6-195-249-146-101.ngrok-free.app//utc')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('current-time').textContent = data.data;
+            });
+
+            fetch('https://27f7-195-249-146-101.ngrok-free.app')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("current-time-api").textContent = data.date;
+            });
+    </script>
+    
+</body>
+</html>

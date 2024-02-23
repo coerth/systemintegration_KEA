@@ -4,8 +4,6 @@ import os
 import requests
 from pathlib import Path
 
-
-
 app = FastAPI()
 
 json_file_path = os.path.join(Path(__file__).parent.parent,"data", 'me.json')
@@ -13,8 +11,6 @@ csv_file_path = os.path.join(Path(__file__).parent.parent,"data", 'me.csv')
 xml_file_path = os.path.join(Path(__file__).parent.parent,"data", 'me.xml')
 yaml_file_path = os.path.join(Path(__file__).parent.parent,"data", 'me.yaml')
 txt_file_path = os.path.join(Path(__file__).parent.parent,"data", 'me.txt')
-
-print(json_file_path)
 
 @app.get("/")
 def root():

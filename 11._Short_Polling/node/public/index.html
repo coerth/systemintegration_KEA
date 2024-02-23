@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Polling</title>
+</head>
+<body>
+    <h1>Short Polling</h1>
+    <p>Number Array</p>
+    <div id="random-numbers"></div>
+    <script>
+        const shortPollingDelay = 2000;
+
+        const randomNumbersDiv = document.getElementById('random-numbers');
+
+        const poll = () => {
+            console.log('Polling...');
+            fetch('/randomNumbers')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Data:', data);
+                    randomNumbersDiv.textContent = data.data.join(', ');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        setInterval(poll, shortPollingDelay)
+    </script>
+</body>
+</html>
