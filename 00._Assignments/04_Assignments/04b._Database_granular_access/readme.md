@@ -37,10 +37,13 @@ this assignment involves setting up a database with granular access, document ho
 
 ## Usage
 
-Azure: sysintegration.database.windows.net
-Database: icecream_db
-User: icecream
-Password: !cecre@m123
+**Azure Server:** `sysintegration.database.windows.net`
+
+**Database:** `icecream_db`
+
+**User:** `icecream`
+
+**Password:** `!cecre@m123`
 
 ### Access Rights
 | Role      | Favorite Ice Creams | Ice Cream Distributors | Secret Recipes |
