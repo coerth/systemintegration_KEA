@@ -45,7 +45,7 @@ Password: !cecre@m123
 ### Access Rights
 | Role      | Favorite Ice Creams | Ice Cream Distributors | Secret Recipes |
 |-----------|----------------------|------------------------|----------------|
-| icecream  | Read/Write           | Read                   | Read/Write     |
+| icecream  | Read/Write           | Read                   | Denied Access   |
 
 
 ### SQLCMD
