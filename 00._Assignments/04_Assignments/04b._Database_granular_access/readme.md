@@ -1,4 +1,4 @@
-![image](https://github.com/coerth/systemintegration_KEA/assets/59032722/b78cc02b-8efa-40c3-aafa-545b01baa8db)# Icecream DB With Granular Access
+# Icecream DB With Granular Access
 
 ## Introduction
 
