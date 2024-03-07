@@ -36,7 +36,7 @@ MS SQL Server hosted in Azure
 #### Ice Cream Table
 
 | Role     | User Name | User Name | Favorite Flavor | Secret Recipes |
-| -------- | ------------------- | ---------------------- | -------------- |
+| --------| ------------------- | ------------------- | ---------------------- | -------------- |
 | icecream | Denied Access        | Read/Write          | Read                   | Denied Access  |
 
 ### SQLCMD
