@@ -8,38 +8,14 @@ this assignment involves setting up a database with granular access, document ho
 
 ### Favorite Ice Creams
 
-**Table Name:** `favorite_ice_cream`
+**Table Name:** `icecream`
 
-| Column Name     | Data Type    | Description               |
-| --------------- | ------------ | ------------------------- |
-| person_id       | INT          | Unique identifier         |
-| full_name       | VARCHAR(100) | Full name of the person   |
-| favorite_flavor | VARCHAR(100) | Favorite ice cream flavor |
-
-### Ice Cream Distributors
-
-**Table Name:** `ice_cream_distributors`
-
-| Column Name           | Data Type    | Description                        |
-| --------------------- | ------------ | ---------------------------------- |
-| distributor_id        | INT          | Unique identifier                  |
-| distributor_name      | VARCHAR(100) | Name of the distributor company    |
-| country               | VARCHAR(100) | Country where distributor operates |
-| headquarters_location | VARCHAR(100) | Location of headquarters           |
-| contact_email         | VARCHAR(100) | Email address for contacting       |
-| contact_phone         | VARCHAR(20)  | Phone number for contacting        |
-
-### Secret Recipes
-
-**Table Name:** `secret_recipes`
-
-| Column Name      | Data Type    | Description                                        |
-| ---------------- | ------------ | -------------------------------------------------- |
-| recipe_id        | INT          | Unique identifier                                  |
-| flavor           | VARCHAR(100) | Flavor of the ice cream for the recipe             |
-| ingredients      | TEXT         | List of ingredients required for the recipe        |
-| instructions     | TEXT         | Step-by-step instructions for making the ice cream |
-| secret_ingredient | VARCHAR(100) | The secret ingredient for the recipe               |
+| Column Name     | Data Type    | Description                                      |
+| --------------- | ------------ | ------------------------------------------------ |
+| user_id         | INT       | Unique identifier for the user                   |
+| user_name       | VARCHAR(100) | The username of the user                         |
+| favorite_flavor | VARCHAR(100) | The user's favorite ice cream flavor             |
+| secret_recipe   | VARCHAR(200) | A secret recipe associated with the user (hidden)|
 
 ## Usage
 
@@ -47,13 +23,15 @@ this assignment involves setting up a database with granular access, document ho
 
 **Database:** `icecream_db`
 
-**User:** `icecream`
+**User:** `limited_user`
 
 **Password:** `!cecre@m123`
 
 ### Access Rights
 
-| Role     | Favorite Ice Creams | Ice Cream Distributors | Secret Recipes |
+#### Ice Cream Table
+
+| Role     | User Name | Favorite Flavor | Secret Recipes |
 | -------- | ------------------- | ---------------------- | -------------- |
 | icecream | Read/Write          | Read                   | Denied Access  |
 
@@ -64,7 +42,7 @@ sqlcmd -S sysintegration.database.windows.net -U YourUsername@sysintegration -P 
 you can then execute sql queries
 
 example:
-SELECT \* FROM favorite_ice_creams;
+SELECT \* FROM icecream;
 
 # Exposee
 
