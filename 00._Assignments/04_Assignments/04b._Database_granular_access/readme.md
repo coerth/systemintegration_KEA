@@ -4,6 +4,10 @@
 
 this assignment involves setting up a database with granular access, document how to use it and use another persons documentation to access theirs.
 
+## Server
+
+MS SQL Server hosted in Azure
+
 ## Database Schema
 
 ### Favorite Ice Creams
@@ -31,9 +35,9 @@ this assignment involves setting up a database with granular access, document ho
 
 #### Ice Cream Table
 
-| Role     | User Name | Favorite Flavor | Secret Recipes |
+| Role     | User Name | User Name | Favorite Flavor | Secret Recipes |
 | -------- | ------------------- | ---------------------- | -------------- |
-| icecream | Read/Write          | Read                   | Denied Access  |
+| icecream | Denied Access        | Read/Write          | Read                   | Denied Access  |
 
 ### SQLCMD
 
