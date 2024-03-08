@@ -52,18 +52,3 @@ SELECT \* FROM icecream;
 
 **Github Link:** `https://github.com/Stiickish/systemintegration_KEA/blob/main/Assignments/04b.Database-Granular-Access/ReadMe.md`
 
-![image](https://github.com/coerth/systemintegration_KEA/assets/59032722/1fbab2c9-2f8e-4625-81f4-afa6e7b5ac23)
-
-![image](https://github.com/coerth/systemintegration_KEA/assets/59032722/f0e15e6f-7ff2-41bd-b225-a5306d1d49e3)
-
-![image](https://github.com/coerth/systemintegration_KEA/assets/59032722/f0d8a484-fedb-40d5-be0d-a079eaafeb6b)
-
-![image](https://github.com/coerth/systemintegration_KEA/assets/59032722/7f357f3e-d9df-4776-ac55-f658a8653f6c)
-
-![image](https://github.com/coerth/systemintegration_KEA/assets/59032722/40d14926-18cb-4abf-a14e-dacf3c820bb0)
-
-![image](https://github.com/coerth/systemintegration_KEA/assets/59032722/9aa33e15-c002-4463-84e4-9c1335d2416d)
-
-
-
-
