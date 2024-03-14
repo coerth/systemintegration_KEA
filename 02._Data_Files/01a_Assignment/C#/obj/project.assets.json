@@ -124,11 +124,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Morten\\Documents\\GitHub\\Kea Software Development\\systemintegration_KEA\\02.Data_Files\\01a Assignment\\C#\\C#.csproj",
+      "projectUniqueName": "C:\\Users\\Morten\\Documents\\GitHub\\Kea Software Development\\systemintegration_KEA\\02._Data_Files\\01a_Assignment\\C#\\C#.csproj",
       "projectName": "C#",
-      "projectPath": "C:\\Users\\Morten\\Documents\\GitHub\\Kea Software Development\\systemintegration_KEA\\02.Data_Files\\01a Assignment\\C#\\C#.csproj",
+      "projectPath": "C:\\Users\\Morten\\Documents\\GitHub\\Kea Software Development\\systemintegration_KEA\\02._Data_Files\\01a_Assignment\\C#\\C#.csproj",
       "packagesPath": "C:\\Users\\Morten\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Morten\\Documents\\GitHub\\Kea Software Development\\systemintegration_KEA\\02.Data_Files\\01a Assignment\\C#\\obj\\",
+      "outputPath": "C:\\Users\\Morten\\Documents\\GitHub\\Kea Software Development\\systemintegration_KEA\\02._Data_Files\\01a_Assignment\\C#\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Visual Studio\\Shared\\NuGetPackages"

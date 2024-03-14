@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ph4A4Wc1O2dw86UQG8bRf1C/v2Co3/GUdcchyUSwrP0Yy2oM/kAgsXKhU5W4n59fqjLTEG9nndLiet4m4eBjYA==",
+  "dgSpecHash": "YuEP9ViBN70xH1iZAROHKY31WF6k2A+LnohvuOtCHLfTgNYWVkbBY+pD5OvC1FbZ68eD69Cmpsg65RJmBrmbAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Morten\\Documents\\GitHub\\Kea Software Development\\systemintegration_KEA\\02.Data_Files\\01a Assignment\\C#\\C#.csproj",
+  "projectFilePath": "C:\\Users\\Morten\\Documents\\GitHub\\Kea Software Development\\systemintegration_KEA\\00._Assignments\\01a_Assignment\\C#\\C#.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Morten\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
     "C:\\Users\\Morten\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
