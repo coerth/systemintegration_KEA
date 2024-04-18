@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Example</title>
+</head>
+<body>
+    <!-- assisgnement: Create a button that calls the function sendGreeting when clicked-->
+    <button onclick="sendGreeting()">Send Greeting</button>
+
+
+    <script>
+        
+        // Create a new WebSocket object and connect to the server
+        const ws = new WebSocket('ws://localhost:8080')
+
+        ws.onopen = () => {
+            console.log('Connected to server')
+        }
+
+        ws.onmessage = (message) => {
+            console.log('Received message from server:', message.data)
+        }
+
+        ws.onerror = (error) => {
+            console.log('Error connecting to server:', error)
+        }
+
+        // Create a function that sends a greeting to the server
+        function sendGreeting() {
+            console.log('Sending greeting to server...')
+            ws.send('Hello Server!')
+        }
+
+    </script>
+    
+</body>
+</html>
