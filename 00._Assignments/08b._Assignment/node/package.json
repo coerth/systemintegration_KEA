@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@ngrok/ngrok": "^1.0.0",
+    "csv-parser": "^3.0.0",
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "knex": "^3.1.0",
+    "mysql2": "^3.9.6",
+    "objection": "^3.1.4",
+    "sqlite3": "^5.1.7",
+    "xml2js": "^0.6.2"
+  },
+  "name": "node",
+  "version": "1.0.0",
+  "main": "knexfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
