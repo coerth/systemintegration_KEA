@@ -1,8 +1,9 @@
 exports.seed = function(knex) {
     // Deletes ALL existing entries
-    return knex('Spaceships').del()
+    
+    return knex('Crew_members').del()
         .then(function () {
-            return knex('Crew_members').del();
+            return knex('Spaceships').del();
         })
         .then(function () {
             // Inserts seed entries into Spaceships
