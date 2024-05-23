@@ -1,0 +1,7 @@
+REMEMBER 
+
+Cards
+
+Success: 4242424242424242
+Require authentication: 4000002500003155
+Declined: 4000000000009995
