@@ -1,16 +1,19 @@
 // Import the functions
-const { decode } = require('punycode');
-const readerFunctions = require('./fileReader.js');
-const path = require('path');
+import * as readerFunctions from './fileReader.js';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
-const dataFolder = path.join(__dirname, '..', 'data');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const dataFolder = join(__dirname, '..', 'data');
 
 // Subfolders for each data type
-const yamlFolderPath = path.join(dataFolder, 'me.yaml');
-const jsonFolderPath = path.join(dataFolder, 'me.json');
-const xmlFolderPath = path.join(dataFolder, 'me.xml');
-const csvFolderPath = path.join(dataFolder, 'me.csv');
-const txtFolderPath = path.join(dataFolder, 'me.txt');
+const yamlFolderPath = join(dataFolder, 'me.yaml');
+const jsonFolderPath = join(dataFolder, 'me.json');
+const xmlFolderPath = join(dataFolder, 'me.xml');
+const csvFolderPath = join(dataFolder, 'me.csv');
+const txtFolderPath = join(dataFolder, 'me.txt');
 
 console.log(dataFolder)
 

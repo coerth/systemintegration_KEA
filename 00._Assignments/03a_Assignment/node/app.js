@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/json', (req, res) => {
-    res.json(readJSONFromFile('../../01a Assignment/data/me.json'));
+    res.json(readJSONFromFile('../data/me.json'));
 });
 
 app.get('/pythonjson', async (req, res) => {
@@ -28,7 +28,7 @@ app.get('/pythonjson', async (req, res) => {
 });
 
 app.get('/xml', (req, res) => {
-    res.json(readXMLFromFile('../../01a Assignment/data/me.xml'));
+    res.json(readXMLFromFile('../data/me.xml'));
 });
 
 app.get('/pythonxml', async (req, res) => {
@@ -47,7 +47,7 @@ app.get('/pythonxml', async (req, res) => {
 });
 
 app.get('/yaml', (req, res) => {
-    res.json(readYAMLFromFile('../../01a Assignment/data/me.yaml'));
+    res.json(readYAMLFromFile('../data/me.yaml'));
 });
 
 app.get('/pythonyaml', async (req, res) => {
@@ -66,7 +66,7 @@ app.get('/pythonyaml', async (req, res) => {
 });
 
 app.get('/csv', (req, res) => {
-    readCSVFromFile('../../01a Assignment/data/me.csv')
+    readCSVFromFile('../data/me.csv')
     .then(data => {
         res.json(data);
     })
@@ -91,7 +91,7 @@ app.get('/pythoncsv', async (req, res) => {
 });
 
 app.get('/txt', (req, res) => {
-    res.json(readTextFile('../../01a Assignment/data/me.txt'));
+    res.json(readTextFile('../data/me.txt'));
 });
 
 app.get('/pythontxt', async (req, res) => {

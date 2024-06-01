@@ -1,6 +1,5 @@
 import express from 'express';
-import pkg from '../../01a Assignment/JS/fileReader.js';
-const { readYAMLFromFile, readJSONFromFile, readXMLFromFile, readCSVFromFile, readTextFile } = pkg;
+import * as readerFunctions from './fileReader.js';
 
 const app = express();
 
@@ -9,19 +8,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/json', (req, res) => {
-    res.json(readJSONFromFile('../../01a Assignment/data/me.json'));
+    res.json(readerFunctions.readJSONFromFile('../data/me.json'));
 });
 
 app.get('/xml', (req, res) => {
-    res.json(readXMLFromFile('../../01a Assignment/data/me.xml'));
+    res.json(readerFunctions.readXMLFromFile('../data/me.xml'));
 });
 
 app.get('/yaml', (req, res) => {
-    res.json(readYAMLFromFile('../../01a Assignment/data/me.yaml'));
+    res.json(readerFunctions.readYAMLFromFile('../data/me.yaml'));
 });
 
 app.get('/csv', (req, res) => {
-    readCSVFromFile('../../01a Assignment/data/me.csv')
+    readerFunctions.readCSVFromFile('../data/me.csv')
     .then(data => {
         res.json(data);
     })
@@ -31,7 +30,7 @@ app.get('/csv', (req, res) => {
 });
 
 app.get('/txt', (req, res) => {
-    res.json(readTextFile('../../01a Assignment/data/me.txt'));
+    res.json(readerFunctions.readTextFile('../data/me.txt'));
 });
 
 const PORT = 8080

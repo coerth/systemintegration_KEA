@@ -6,11 +6,13 @@ import xml.etree.ElementTree as ET
 from IPython.display import display, HTML
 
 # %%
-json_file_path = os.path.join(Path(__file__).parent.parent.parent, 'me.json')
-csv_file_path = os.path.join(Path(__file__).parent.parent.parent, 'me.csv')
-xml_file_path = os.path.join(Path(__file__).parent.parent.parent, 'me.xml')
-yaml_file_path = os.path.join(Path(__file__).parent.parent.parent, 'me.yaml')
-txt_file_path = os.path.join(Path(__file__).parent.parent.parent, 'me.txt')
+data_folder = os.path.join(Path(__file__).parent.parent, 'data')
+
+json_file_path = os.path.join(data_folder, 'me.json')
+csv_file_path = os.path.join(data_folder, 'me.csv')
+xml_file_path = os.path.join(data_folder, 'me.xml')
+yaml_file_path = os.path.join(data_folder, 'me.yaml')
+txt_file_path = os.path.join(data_folder, 'me.txt')
 
 json_data = read_JSON_from_file(json_file_path)
 csv_data = read_CSV_from_file_pandas(csv_file_path)
@@ -25,4 +27,12 @@ if xml_data is not None:
 if yaml_data is not None:
     print(yaml_data)
 
+if txt_data is not None:
+    print(txt_data)
+
+if json_data is not None:
+    print(json_data)
+
+if csv_data is not None:
+    print(csv_data)
 # %%
