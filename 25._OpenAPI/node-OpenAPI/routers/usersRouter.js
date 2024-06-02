@@ -16,6 +16,19 @@ const users = [
  *     responses:
  *       200:
  *         description: Returns all users
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                     description: The user ID.
+ *                   name:
+ *                     type: string
+ *                     description: The user's name.
  */
 router.get("/api/users", (req, res) => {
     res.send({ data: users });
@@ -26,14 +39,41 @@ router.get("/api/users", (req, res) => {
  * /api/users:
  *   post:
  *     description: Create a new user
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - name
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: The user's name.
  *     responses:
  *       200:
- *         description: Returns the users that was created
- * 
+ *         description: Returns the user that was created
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 id:
+ *                   type: integer
+ *                   description: The user ID.
+ *                 name:
+ *                   type: string
+ *                   description: The user's name.
  */
 router.post("/api/users", (req, res) => {
-    const newUser = req.body;
-    newUser.id = ++currentId;
+    const {name} = req.body;
+    if (!name) {
+        res.status(400).send({ error: 'Name is required' });
+        return;
+    }
+    currentId += 1;
+    let newUser = { id: currentId, name: name };
     users.push(newUser);
 
     res.send({ data: newUser });
